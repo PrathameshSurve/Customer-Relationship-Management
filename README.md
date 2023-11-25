@@ -56,7 +56,7 @@ Before running the application, ensure you have the following installed:
 
 ## Screenshots
 
-![Home Page](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_HomePage.png)
+![Home Page](/frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_HomePage.png)
 
 ![Login Page](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_loginPage.png)
 
