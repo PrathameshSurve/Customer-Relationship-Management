@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/initialsetup.css}">
+    <title>Initaial User Setup | Crilma</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Cr<span class="skyblue">i</span>lma</a>
+    </header>
+
+    <main>
+        <section class="block1">
+            <div>Welcome <span th:text="${userName}"></span>,</div>
+
+        
+            <form action="/Crilma/dashboard" method="get">
+                <label for="selectIndustry"><h1>Which industry are you in?</h1></label>
+                <select id="selectIndustry" name="selectedIndustry" required>
+                    <option value="" disabled selected>Choose Option</option>
+                    <option value="Sales and Marketing">Sales and Marketing</option>
+                    <option value="Customer Support">Customer Support</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Financial Services">Financial Services</option>
+                </select>
+            
+                <label for="securityQuestion"><h1>Choose Security Question For Password Recovery!</h1></label>
+                <select id="securityQuestion" name="selectedSecurityQuestion" required>
+                    <option value="" disabled selected>Choose Option</option>
+                    <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+                    <option value="What was the name of your first pet?">What was the name of your first pet?</option>
+                    <option value="What is your favorite color?">What is your favorite color?</option>
+                    <option value="What is the name of your favorite teacher?">What is the name of your favorite teacher?</option>
+                    <option value="In what city were you born?">In what city were you born?</option>
+                    <option value="What is the name of your favorite book?">What is the name of your favorite book?</option>
+                    <option value="What is the name of your first childhood friend?">What is the name of your first childhood friend?</option>
+                </select>
+            
+                <label for="securityAnswer"><h3>Enter Answer</h3></label>
+                <input type="text" name="securityAnswer" id="securityAnswer" required placeholder="Enter Answer Here">
+            
+                <br>
+            
+                <input type="submit" value="Get Started ->">
+            </form>
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

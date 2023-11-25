@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <script th:src="@{/js/dashboard.js}"></script>
+    <title>Dashboard | Crilma CRM</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Option 1
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Option 2
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Top navigation -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <a href="/Crilma/update_password"><button type="button">Update Password</button></a>
+                                    <div class="errMessage" th:if="${updatepasswordMessage}" id="error-message">
+                                        <p th:text="${updatepasswordMessage}"></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="overlay" id="dialogOverlay">
+                                        <div class="dialog-box">
+                                            <span class="close-button" id="closeButton">&times;</span>
+                                            <form id="deleteUserForm" action="/Crilma/deleteuser" method="post">
+                                                <label for="email">Email:</label>
+                                                <input type="text" id="email" name="email" required>
+                                                <label for="password">Password:</label>
+                                                <input type="password" id="password" name="password" required>
+                                                <button type="submit">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="button" id="openDialogButton">Delete Account</button>
+                                    <div class="errMessage" th:if="${deleteError}" id="error-message">
+                                        <p th:text="${deleteError}"></p>
+                                    </div>
+                                
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Dashboard content goes here -->
+                <div class="container">
+                    <h2>Dashboard Content</h2>
+                    <!-- Add your content here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    
+<script>
+    //open dialog box for delete password
+   const openDialogButton = document.getElementById('openDialogButton');
+   const dialogOverlay = document.getElementById('dialogOverlay');
+   const closeButton = document.getElementById('closeButton');
+ 
+   openDialogButton.addEventListener('click', function() {
+       dialogOverlay.style.display = 'block';
+   });
+ 
+   closeButton.addEventListener('click', function() {
+       dialogOverlay.style.display = 'none';
+   });
+</script>
+
+
+
+
+
+
+  <!-- Add Bootstrap and Popper.js JavaScript links here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F5F7F9;
+    min-height: 100vh;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px 30px 100px;
+    z-index: 10;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+header .logo .skyblue{
+    color: skyblue;
+}
+
+header a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+}
+main {
+    position: relative;
+    margin-top: 100px;
+    justify-content: space-between;
+    justify-items:auto;
+    padding: 20px;
+    display: block;
+    height: auto; 
+    width: 100%;
+}
+
+.block1{
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
