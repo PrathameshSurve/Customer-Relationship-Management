@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}" />
+    <script th:src="@{/js/signup.js}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="signupform">
+        <form action="/Crilma/signupsuccessful" method="post">
+            <h1>Sign Up!</h1>
+            <label for="name">Name</label>
+            <input type="text" name="uname" id="name" placeholder="Enter Full Name" required autocomplete="off" />
+            <label for="email">Email</label>
+            <input type="email" name="uemail" id="email" placeholder="Enter Email" required autocomplete="off" />
+            <label for="password">Password</label>
+            <input type="password" name="upassword" id="password" placeholder="Choose Password" required
+                autocomplete="off" />
+            <br>
+            <input type="submit" id="submitButton" value="Sign Up" />
+            <p>Already have an account? <a href="/Crilma/login">Login</a></p>
+            <div class="errMessage" th:if="${userAlreadyExistsError}">
+                <p th:text="${userAlreadyExistsError}"></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

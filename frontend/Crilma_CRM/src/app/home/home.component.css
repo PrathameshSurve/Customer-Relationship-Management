@@ -1,0 +1,344 @@
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 60px 40px;
+    z-index: 10;
+}
+
+header.sticky {
+    padding: 5px 20px;
+    background: #fff;
+}
+
+header .logo {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+header .logo .skyblue {
+    color: skyblue;
+}
+
+header.sticky .logo {
+    color: #333;
+}
+
+header .ul a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    display: none;
+}
+
+header.sticky .ul a {
+    display: block;
+    color: #333;
+}
+
+header a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    padding: 10px 20px;
+    transition: 0.3s;
+    float: right;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+#signup {
+    background: linear-gradient(135deg, #008cff, #009999);
+    color: #FFFFFF;
+    border-radius: 20px;
+}
+
+#signup:hover {
+    background: linear-gradient(135deg, #009999, #008cff);
+}
+
+#login:hover {
+    color: #fff;
+    border: solid 1px #ffffff;
+    border-radius: 20px;
+}
+
+header.sticky a {
+    color: #333;
+    padding: 8px 18px;
+}
+
+header.sticky #login:hover {
+    border: 1px solid skyblue;
+    color: #333;
+}
+
+.quote {
+    color: rgb(160, 223, 248);
+    font-size: 1.2rem;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+.homeblock {
+    background-color: rgba(255, 255, 255, 0.13);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#block1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    text-align: center;
+    height: 80vh;
+    width: 100%;
+    background-image: url('../../assets/images/backgrounds/human-resources-concept-with-hand.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.homeblock h1 {
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: -webkit-linear-gradient(45deg, rgb(0, 226, 169), #b8ffb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Block 2 */
+#homeblock2 {
+    background: #005787;
+}
+
+.homeblock .h2-heading {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(45deg, rgb(0, 226, 169), #b8ffb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px 0px 20px 0px;
+    margin: 20px 0px;
+}
+
+#homeblock2 .table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* .col{
+    flex-basis: 5%;
+} */
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-6 {
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.table p {
+    font-size: 0.80rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.table img {
+    width: 100%;
+    height: auto;
+}
+
+#homeblock2 .row {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    /* color: #333; */
+    text-align: left;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+
+/* Block 3 */
+#homeblock3 {
+    background-image: url('../../assets/images/backgrounds/collage-customer-experience-concept.jpg');
+    /* background-color: #009999; */
+    background-size: cover;
+    background-position: center;
+    /* background: #4d95c9; */
+    margin-top: 20px;
+    text-align: center;
+}
+
+#homeblock3 details {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#homeblock3 summary {
+    font-weight: bold;
+    color: #b8ebff;
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 1px red solid; */
+}
+
+.column {
+    background-color: #fafafaaf;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 10px;
+    width: calc(25% - 20px);
+    /* Adjust the width as needed */
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+p {
+    font-size: 16px;
+}
+
+.buy-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background-color: #0074b8;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* block 4 */
+#homeblock4 {
+    background-color: #009999;
+    /* background: #4d95c9; */
+}
+
+.card{
+    align-items: center;
+    background: #4d95c9ab;
+}
+
+
+/* Style the footer */
+footer {
+    /* position: fixed;
+    top: 94vh; */
+    background: -webkit-linear-gradient(45deg, rgb(0, 226, 169), #b8ffb8);
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    /* right: 0;  */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 10px 0;
+    /* border-radius: 30px; */
+}
+
+/* CSS styles for screens smaller than or equal to 768px (typical mobile devices) */
+@media (max-width: 768px) {
+
+    header .ul {
+        display: none;
+    }
+
+    #homeblock2 h2 {
+        font-size: 1.8rem;
+    }
+
+    #homeblock2 .row {
+        width: 14rem;
+    }
+
+    #homeblock2 .table {
+        display: block;
+        /* align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center; */
+    }
+
+    #homeblock2 .table .col-6 {
+        min-width: 17.5rem;
+        height: 10rem;
+    }
+
+    .plan {
+        flex-direction: column;
+    }
+
+    .column {
+        width: calc(100% - 20px);
+    }
+
+    footer {
+        position: static;
+        font-size: 8px;
+        text-align: center;
+        padding: 0px 0px;
+        border-radius: 0px;
+    }
+
+}

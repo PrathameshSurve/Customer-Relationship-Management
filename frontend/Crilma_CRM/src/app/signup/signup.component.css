@@ -1,0 +1,70 @@
+
+
+.signup-page {
+    background: conic-gradient(from 140deg, #0000FF, #87CEEB, #90EE90);
+    /* background: radial-gradient(circle, #87CEEB, #90EE90);
+    background: linear-gradient(45deg, #0000FF, #87CEEB, #90EE90);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.signupform {
+    background: linear-gradient(to bottom, #87CEEB, #90EE90);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    width: 350px;
+}
+
+div.signupform h1 {
+    text-align: center;
+    margin-top: 0;
+    background:  -webkit-linear-gradient(65deg, #f3fff3, #90EE91);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(63, 63, 63);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-size: 0.80rem;
+}
+
+/* .red-placeholder {
+    color: red;
+  } */
+
+/* input[type="submit"] {
+    background: linear-gradient(135deg,#87CEEB,  #0000FF);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #3099c2, #000000);
+} */
+
+.errMessage {
+    color: red;
+    font-size: 0.80rem;
+}

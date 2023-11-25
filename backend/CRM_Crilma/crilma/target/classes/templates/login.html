@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+    <script th:src="@{/js/login.js}"></script>
+    <!-- Add Bootstrap CSS (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Add Bootstrap JavaScript and jQuery (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form" action="/Crilma/checkinitialsetup" method="post">
+            <label for="username">Email:</label>
+            <input type="email" id="username" name="email" placeholder="Enter your email" required autocomplete="off">
+            <label for="confirmedpassword">Password:</label>
+            <input type="password" id="confirmedpassword" name="password" placeholder="Enter your password" required
+                autocomplete="off">
+            <button type="submit" id="loginButton">Log In</button>
+            <div class="errMessage" th:if="${passwordError}">
+                <p th:text="${passwordError}"></p>
+            </div>
+            <div class="errMessage" th:if="${userNotExistsError}">
+                <p th:text="${userNotExistsError}"></p>
+            </div>
+            <div class="errMessage" th:if="${userDoesNotExistsError}">
+                <p th:text="${userDoesNotExistsError}"></p>
+            </div>
+            <div class="errMessage" th:if="${PasswordResetSuccessfulMessage}">
+                <p th:text="${PasswordResetSuccessfulMessage}"></p>
+            </div>
+        
+            <div class="forgot-password">
+                <a href="#" data-toggle="modal" data-target="#forgotPasswordModal">Forgot Password?</a>
+            </div>
+            <p>Don't have an account? <a href="/Crilma/signup">Sign Up</a></p>
+        </form>
+    </div>
+
+
+
+
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
+    aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="forgotPasswordForm" th:action="@{/Crilma/forgot-password}" method="post">
+                    <div class="form-group">
+                        <label for="forgotEmail">Email:</label>
+                        <input type="email" class="form-control" id="forgotEmail" name="forgotEmail" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="forgotPasswordForm">Submit</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

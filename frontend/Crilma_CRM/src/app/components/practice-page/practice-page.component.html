@@ -1,0 +1,35 @@
+<div class="navbar2">
+  <span class="logo">Cr<span class="skyblue">i</span>lma</span>
+  <span class="ul">
+    <a routerLink="/">Home</a>
+  </span>
+
+  <button type="button" (click)="getsignup()">Sign Up!</button>
+</div>
+
+<div class="practicepgae">
+
+  <div class="user-list">
+    <h1 class="text-center">User List</h1>
+    <table *ngIf="newArr">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Industry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of newArr">
+          <td>{{ user.id }}</td>
+          <td>{{ user.uname }}</td>
+          <td>{{ user.uemail }}</td>
+          <td>{{ user.selectedIndustry }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

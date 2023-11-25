@@ -1,0 +1,56 @@
+<div class="login-page">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <label for="username">Email:</label>
+            <input type="email" id="username" pInputText formControlName="email" name="email"
+                placeholder="Enter your email" required autocomplete="off">
+            <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['pattern']">Email should be valid</div>
+            </small>
+            <label for="confirmedpassword">Password:</label>
+            <input type="password" id="confirmedpassword"  pInputText formControlName="password" name="password" placeholder="Enter your password" required
+                autocomplete="off">
+            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']">Password is required.</div>
+                <div *ngIf="password.errors?.['pattern']">Password should be valid.</div>
+            </small>
+
+            <p-button type="submit" id="loginButton"  label="LOG IN" [disabled]="loginForm.invalid"></p-button>
+
+            <div class="forgot-password">
+                <a href="#" data-toggle="modal" data-target="#forgotPasswordModal">Forgot Password?</a>
+            </div>
+            <p class="signuplink">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+        </form>
+    </div>
+
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm" (ngSubmit)="forgotPassword()" [formGroup]="forgotPasswordGroup">
+                        <div class="form-group">
+                            <label for="forgotEmail">Email:</label>
+                            <input type="email" class="form-control" formControlName="forgotEmail" id="forgotEmail" name="forgotEmail" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="forgotPasswordForm">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

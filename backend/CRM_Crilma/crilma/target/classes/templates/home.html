@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crilma Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <script th:src="@{/js/home.js}"></script>
+    <!-- Boostrap stylesheets and scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo">Cr<span class="skyblue">i</span>lma</span>
+    
+        <a href="/Crilma/signup" id="signup">Sign Up!</a>
+        <a href="/Crilma/login" id="login">Login</a>
+        <span class="ul">
+            <a href="#homeblock3">Buy Plan</a>
+            <a href="#homeblock2">Overview</a>
+            <a href="#">Home</a>
+          </span>
+    </header>
+    <main>
+        <!-- homeblock 1 -->
+        <section id="homeblock1">
+            <div class="homeblock" id="block1">
+                <h1>Crilma</h1>
+                <div class="quote">
+                    <em>Welcome to Crilma ​CRM: Where <b>"Customer Relationships Matter"</b></em>
+                </div>
+            </div>
+        </section>
+        <!-- homeblock 2 -->
+        <section id="homeblock2">
+            <div class="homeblock" id="block2">
+                <div class="h2-heading">
+                    <h2>Here's how Crilma makes selling easier</h2>
+                </div>
+                <div class="table">
+                    <!-- <div class="col"></div> -->
+                    <div class="col-4">
+                        <div class="row">
+                            <p>Improve customer interactions and drive contextual sales with a 360°
+                                view <br> Access all customer details in one place, including auto enriched social
+                                profiles, a
+                                summary of all recent activities and more.</p>
+                        </div>
+                        <div class="row">
+                            <p>
+                                CRM systems efficiently store, organize, and update contact information, providing users
+                                a
+                                comprehensive view of interactions and history with each contact, including names,
+                                emails,
+                                and phone numbers.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p>
+                                CRM enables tracking sales opportunities at different stages, aiding deal
+                                monitoring, task assignments, and priority setting for efficient sales management and
+                                conversion tracking.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img th:src="@{/images/CrilmaCRMdashboard.png}" alt=" Crilma Dashboard Image">
+                    </div>
+                    <!-- <div class="col"></div> -->
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- homeblock 3 -->
+        <section id="homeblock3">
+            <div class="homeblock" id="block3">
+              <h2>Grow with right</h2>
+              <details>
+                <summary>Plan</summary>
+                <div class="plan">
+                  <div class="column">
+                    <h3>Free</h3>
+                    <p>0 Rs.</p>
+                    <a href="/Crilma/signup">
+                        <button class="buy-button" type="button">Buy</button>
+                    </a>
+                    <h4>Benefits:</h4>
+                    <ul>
+                      <li>Benefit 1</li>
+                      <li>Benefit 2</li>
+                      <li>Benefit 3</li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <h3>Growth</h3>
+                    <p>999 Rs./month</p>
+                    <a href="/Crilma/signup">
+                        <button class="buy-button" type="button">Buy</button>
+                    </a>
+                    <h4>Benefits:</h4>
+                    <ul>
+                      <li>Benefit 1</li>
+                      <li>Benefit 2</li>
+                      <li>Benefit 3</li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <h3>Pro <span class="skyblue">(POPULAR)</span></h3>
+                    <p>2,599 Rs./month</p>
+                    <a href="/Crilma/signup">
+                        <button class="buy-button" type="button">Buy</button>
+                    </a>
+                    <h4>Benefits:</h4>
+                    <ul>
+                      <li>Benefit 1</li>
+                      <li>Benefit 2</li>
+                      <li>Benefit 3</li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <h3>Enterprise</h3>
+                    <p>4999 Rs./month</p>
+                    <a href="/Crilma/signup">
+                        <button class="buy-button" type="button">Buy</button>
+                    </a>                      
+                    <h4>Benefits:</h4>
+                    <ul>
+                      <li>Benefit 1</li>
+                      <li>Benefit 2</li>
+                      <li>Benefit 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </section>
+          
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Crilma by Prathamesh Surve. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

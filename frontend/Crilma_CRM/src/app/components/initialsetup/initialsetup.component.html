@@ -1,0 +1,63 @@
+<div class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Cr<span class="text-info">i</span>lma</a>
+    <pButton type="button" pButton name="logout" label="Log out" (click)="logOut()" class="btn btn-outline-primary">
+    </pButton>
+</div>
+
+<div class="container mt-4">
+    <section class="text-center">
+        <div>
+            <h1>Welcome <span>{{ userName }}</span>,</h1>
+        </div>
+
+        <form class="mt-4" (ngSubmit)="updateUserDetails()" [formGroup]="UserDetails">
+            <div class="mb-3">
+                <label for="selectIndustry" class="form-label">
+                    <h3>Which industry are you in?</h3>
+                </label>
+                <br>
+                <p-dropdown id="selectIndustry" name="selectedIndustry" formControlName="selectedIndustry"
+                    [options]="industryOptions" placeholder="Choose Option"></p-dropdown>
+                <small *ngIf="selectedIndustry.invalid && (selectedIndustry.dirty || selectedIndustry.touched)"
+                    class="block p-error">
+                    <div *ngIf="selectedIndustry.errors?.['required']">This field is required.</div>
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="securityQuestion" class="form-label">
+                    <h3>Choose Security Question For Password Recovery!</h3>
+                </label>
+                <br>
+                <p-dropdown id="securityQuestion" name="selectedSecurityQuestion"
+                    formControlName="selectedSecurityQuestion" [options]="securityQuestionOptions"
+                    placeholder="Choose Option"></p-dropdown>
+                <small
+                    *ngIf="selectedSecurityQuestion.invalid && (selectedSecurityQuestion.dirty || selectedSecurityQuestion.touched)"
+                    class="block p-error">
+                    <div *ngIf="selectedSecurityQuestion.errors?.['required']">This field is required.</div>
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="securityAnswer" class="form-label">
+                    <!--<h6>Enter Answer</h6>-->
+                </label>
+                <input type="text" name="securityAnswer" formControlName="securityAnswer" id="securityAnswer"
+                    class="form-control" required placeholder="Enter Your Answer Here">
+                <small *ngIf="securityAnswer.invalid && (securityAnswer.dirty || securityAnswer.touched)"
+                    class="block p-error">
+                    <div *ngIf="securityAnswer.errors?.['required']">This field is required.</div>
+                </small>
+            </div>
+
+            <small *ngIf="submitted && (securityAnswer.errors?.['required'] || selectedSecurityQuestion.errors?.['required'] || 
+            selectedIndustry.errors?.['required'])" class="block p-error">
+                All fields are mandatory.
+            </small>
+
+            <pButton type="submit" pButton label="Get Started ->" class="btn btn-primary" (click)="isFormFilled()">
+            </pButton>
+        </form>
+    </section>
+</div>

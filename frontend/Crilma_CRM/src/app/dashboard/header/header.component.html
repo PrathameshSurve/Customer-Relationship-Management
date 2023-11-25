@@ -1,0 +1,74 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="row mr-2 ml-auto">
+            <ul class="row m-0 align-items-center">
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+                        <img src="../../../assets/images/user-profile-icon.jpg" alt="" class="user-image mr-1 p-2" />
+                        {{ userName }}
+                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            <button type="button" name="logout" label="Log out" (click)="logOut()" class="btn btn-outline-primary">Log Out
+                            </button>
+                            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteAccountModal1">
+                              Delete Account
+                            </button>
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Delete Account Modal 1 -->
+<div class="modal fade" id="deleteAccountModal1" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteAccountModalLabel">Warning...!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Do you really want to delete your account?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" data-target="#deleteAccountModal2" data-toggle="modal"
+          data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Account Modal 2 -->
+<div class="modal fade" id="deleteAccountModal2" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteAccountModalLabel">Warning...!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label for="deletePassword">Enter Your Password:</label>
+        <input type="password" id="deletePassword" class="form-control" [(ngModel)]="deletePassword" name="deletePassword" placeholder="Enter password here" autocomplete="off">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="submit" class="btn btn-danger" (click)="deleteUser()" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
