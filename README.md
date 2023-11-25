@@ -1,12 +1,11 @@
 # Customer Relationship Management Project
 
-This project is a Customer Relationship Management (CRM) system built using Spring Boot for the backend and Angular for the frontend. It includes CRUD operations, user authentication, authorization, and utilizes Bootstrap, Angular Material, and PrimeNG for the UI components.
+This project is a Customer Relationship Management (CRM) system built using Spring Boot for the backend and Angular for the frontend. It includes CRUD operations, user authentication, and utilizes Bootstrap, Angular Material, and PrimeNG for the UI components and MySQL for database utilities.
 
 ## Features
 
 - **CRUD Operations:** Perform Create, Read, Update, and Delete operations on customer data.
 - **User Authentication:** Secure user authentication system with login and signup functionality.
-- **Authorization:** Implement role-based access control to restrict actions based on user roles.
 - **UI Frameworks:**
   - Bootstrap: for responsive and visually appealing design.
   - Angular Material: for Angular components and styles.
@@ -19,7 +18,7 @@ Before running the application, ensure you have the following installed:
 - Java Development Kit (JDK)
 - Node.js and npm
 - Angular CLI
-- MongoDB (or any other preferred database)
+- MySQL (or any other preferred database)
 
 ## Getting Started
 
@@ -27,7 +26,7 @@ Before running the application, ensure you have the following installed:
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/your-crm-project.git
+    git clone https://github.com/PrathameshSurve/Customer-Relationship-Management-System.git
 
 2. Navigate to the backend directory:
 
@@ -55,6 +54,10 @@ Before running the application, ensure you have the following installed:
 
    The frontend will be accessible at `http://localhost:4200`.
 
+## Screenshots
+
+![Screenshot](screenshots/login.png)
+
 ## Configuration
 
 ### Backend
@@ -78,3 +81,7 @@ Before running the application, ensure you have the following installed:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Status
+
+This project is currently in development.
