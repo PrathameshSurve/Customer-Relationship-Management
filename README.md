@@ -58,13 +58,14 @@ Before running the application, ensure you have the following installed:
 
 ![Home Page](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_HomePage.png)
 
-![Login Page](/frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_loginPage.png)
+![Login Page](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_loginPage.png)
 
-![SignUp Page](/frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_SignupPage.png)
+![SignUp Page](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_SignupPage.png)
 
-![Initial Setup](/frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_SecurityQuestionPage.png)
+![Initial Setup](frontend/CRM_Crilma/src/assets/images/Screenshots/Crilma_SecurityQuestionPage.png)
 
-![Dashboard](/frontend/CRM_Crilma/src/assets/images/Screenshots/CrilmaCRMdashboard.png)
+![Dashboard](frontend/CRM_Crilma/src/assets/images/Screenshots/CrilmaCRMdashboard.png)
+
 
 ## Configuration
 
